@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Téléphones - Damien Shopping</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; text-align: center; background: #f8f9fa; color: #333; }
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 0;
+        }
+        .nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        h2 { margin: 40px 0 30px; font-size: 2.2rem; }
+        .brands {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .brand-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .brand-card:hover { transform: translateY(-10px); }
+        .brand-card h3 {
+            padding: 15px;
+            background: #667eea;
+            color: white;
+            margin: 0;
+        }
+        .products-list {
+            padding: 20px;
+            text-align: left;
+        }
+        .products-list ul {
+            list-style: none;
+        }
+        .products-list li {
+            padding: 8px 0;
+            font-size: 1.1rem;
+        }
+        .btn-bleu {
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #ff6b6b, #ff4757);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 2.5rem 1rem;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav">
+            <h1>Damien Shopping</h1>
+            <div style="display: flex; align-items: center; gap: 15px; font-size: 1.1rem;">
+                <a href="acceuil.html" style="color:white; text-decoration:none;">Accueil</a>
+                <a href="boutique.html" style="color:white; text-decoration:none;">Boutique</a>
+                <a href="telephone.html" style="color:white; text-decoration:none;">Téléphones</a>
+                <a href="ordinateur.html" style="color:white; text-decoration:none;">Ordinateurs</a>
+                <a href="accessoires.html" style="color:white; text-decoration:none;">Accessoires</a>
+                <a href="contact.html" style="color:white; text-decoration:none;">Contact</a>
+                
+                <div onclick="toggleCart()" style="cursor: pointer; position: relative; font-size: 1.6rem;">
+                    🛒 
+                    <span id="cart-count" style="position: absolute; top: -8px; right: -10px; background: #ff4757; color: white; border-radius: 50%; padding: 2px 7px; font-size: 12px; font-weight: bold;">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <h2>Nos Téléphones par Marque</h2>
+        
+        <div class="brands">
+
+            <!-- TECNO Spark -->
+            <div class="brand-card">
+                <h3>TECNO Spark</h3>
+                <div class="products-list">
+                    <ul>
+                        <li>Spark 10</li>
+                        <li>Spark 20</li>
+                        <li>Spark 30</li>
+                    </ul>
+                    <a href="spark.html"><button class="btn-bleu">Voir les modèles Spark</button></a>
+                </div>
+            </div>
+
+            <!-- TECNO Camon -->
+            <div class="brand-card">
+                <h3>TECNO Camon</h3>
+                <div class="products-list">
+                    <ul>
+                        <li>Camon 20</li>
+                        <li>Camon 30</li>
+                    </ul>
+                    <a href="camon.html"><button class="btn-bleu">Voir les modèles Camon</button></a>
+                </div>
+            </div>
+
+            <!-- TECNO Pop -->
+            <div class="brand-card">
+                <h3>TECNO Pop</h3>
+                <div class="products-list">
+                    <ul>
+                        <li>Pop 9</li>
+                        <li>Pop 10</li>
+                        <li>Pop 20</li>
+                    </ul>
+                    <a href="pop.html"><button class="btn-bleu">Voir les modèles Pop</button></a>
+                </div>
+            </div>
+
+            <!-- iPhone -->
+            <div class="brand-card">
+                <h3>Apple iPhone</h3>
+                <div class="products-list">
+                    <ul>
+                        <li>iPhone X</li>
+                        <li>iPhone 11 Pro</li>
+                        <li>iPhone 12</li>
+                        <li>iPhone 13</li>
+                        <li>iPhone 14 Pro</li>
+                        <li>iPhone 15 Pro</li>
+                        <li>iPhone 16 Pro</li>
+                        <li>iPhone 17</li>
+                    </ul>
+                    <a href="iphone.html"><button class="btn-bleu">Voir les iPhones</button></a>
+                </div>
+            </div>
+
+            <!-- Samsung -->
+            <div class="brand-card">
+                <h3>Samsung Galaxy</h3>
+                <div class="products-list">
+                    <ul>
+                        <li>Galaxy A15</li>
+                        <li>Galaxy A25</li>
+                        <li>Galaxy A35</li>
+                        <li>Galaxy S23</li>
+                        <li>Galaxy S24</li>
+                        <li>Galaxy S25</li>
+                    </ul>
+                    <a href="samsung.html"><button class="btn-bleu">Voir les Samsung</button></a>
+                </div>
+            </div>
+
+            <!-- Infinix -->
+            <div class="brand-card">
+                <h3>Infinix</h3>
+                <div class="products-list">
+                    <ul>
+                        <li>Hot Series</li>
+                        <li>Smart Series</li>
+                        <li>Note Series</li>
+                        <li>Zero Series</li>
+                    </ul>
+                    <a href="infinix.html"><button class="btn-bleu">Voir les Infinix</button></a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Damien Shopping - Tous droits réservés</p>
+        <p>Développé par <strong>bossdamien77-coder</strong></p>
+    </footer>
+
+    <!-- Script Panier (avec WhatsApp) -->
+    <script>
+        let cart = [];
+        // ... (Tu peux coller ici le script complet du panier avec WhatsApp que je t'ai donné précédemment)
+    </script>
+</body>
+</html>
